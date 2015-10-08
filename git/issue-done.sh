@@ -56,7 +56,7 @@ clean_local_version() {
   git checkout $target
 
   # Catch up with the latest from origin
-  git merge $target
+  git merge origin/$target
 
   # Remove branches that already been merged into HEAD
   git branch --merged | grep -v "\*" | xargs -n 1 git branch -d
